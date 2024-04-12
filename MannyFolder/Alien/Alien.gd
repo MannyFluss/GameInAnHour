@@ -20,8 +20,6 @@ func _process(delta):
 func _on_timer_timeout():
 	var targetDirection = Vector2.DOWN
 	apply_impulse(targetDirection * mySpeed)
-	
-	
 
 func timeToGetDestroyed():
 	queue_free()

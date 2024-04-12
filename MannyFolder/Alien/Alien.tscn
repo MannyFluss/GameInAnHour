@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bl6orb48j4xel"]
+[gd_scene load_steps=6 format=3 uid="uid://bl6orb48j4xel"]
 
 [ext_resource type="Script" path="res://MannyFolder/Alien/Alien.gd" id="1_aw53s"]
+[ext_resource type="Texture2D" uid="uid://bpt0jxdoksysk" path="res://MannyFolder/Alien/que.png" id="2_sdx27"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_iecv1"]
 
@@ -17,9 +18,10 @@ script = ExtResource("1_aw53s")
 scale = Vector2(5, 5)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Graphics"]
-position = Vector2(-6, -6)
-scale = Vector2(8.00907, 8)
+position = Vector2(-0.5, 0.200004)
+scale = Vector2(19.0215, 20.4)
 mesh = SubResource("SphereMesh_iecv1")
+texture = ExtResource("2_sdx27")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="Graphics"]
 position = Vector2(6, -6)
