@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6jh6m06d2kho"]
+[gd_scene load_steps=3 format=3 uid="uid://b6jh6m06d2kho"]
 
 [ext_resource type="Script" path="res://Ngbb2012/Main.gd" id="1_303au"]
+[ext_resource type="PackedScene" uid="uid://d0ap5mceewtk2" path="res://MannyFolder/AlienSpawner/AlienSpawner.tscn" id="2_l2blb"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_303au")
+
+[node name="AlienSpawner" parent="." instance=ExtResource("2_l2blb")]
