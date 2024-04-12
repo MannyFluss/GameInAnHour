@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6jh6m06d2kho"]
+
+[ext_resource type="Script" path="res://Ngbb2012/Main.gd" id="1_303au"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_303au")
