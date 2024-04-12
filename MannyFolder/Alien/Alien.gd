@@ -5,6 +5,9 @@ class_name Alien
 @export
 var myTarget : Node2D
 
+@export
+var mySpeed = 30
+
 func _ready():
 	pass # Replace with function body.
 
@@ -16,6 +19,13 @@ func _process(delta):
 
 func _on_timer_timeout():
 	var targetDirection = Vector2.DOWN
-	apply_impulse(targetDirection * 8)
+	apply_impulse(targetDirection * mySpeed)
+	
+	
+
+func timeToGetDestroyed():
+	queue_free()
+	pass
+
 	
 	

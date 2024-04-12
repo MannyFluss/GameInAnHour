@@ -2,20 +2,19 @@
 
 [ext_resource type="Script" path="res://MannyFolder/Alien/Alien.gd" id="1_aw53s"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lwhq1"]
-
 [sub_resource type="SphereMesh" id="SphereMesh_iecv1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ofwtu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lwhq1"]
+radius = 56.4358
 
 [node name="Node2D" type="RigidBody2D"]
 gravity_scale = 1.66533e-16
 script = ExtResource("1_aw53s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_lwhq1")
-
 [node name="Graphics" type="Node2D" parent="."]
+scale = Vector2(5, 5)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Graphics"]
 position = Vector2(-6, -6)
@@ -43,6 +42,9 @@ position = Vector2(6, -12)
 rotation = 2.65379
 scale = Vector2(9.5, 1)
 mesh = SubResource("BoxMesh_ofwtu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lwhq1")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
