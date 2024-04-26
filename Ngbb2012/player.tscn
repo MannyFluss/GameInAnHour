@@ -11,3 +11,8 @@ script = ExtResource("1_msuhn")
 position = Vector2(6.10352e-05, 0)
 scale = Vector2(-120.744, 60.9664)
 mesh = SubResource("BoxMesh_h3f4e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.098
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
