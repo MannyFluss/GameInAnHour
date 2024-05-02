@@ -28,13 +28,8 @@ position = Vector2(6.10352e-05, 0)
 scale = Vector2(-81.104, 40.9513)
 mesh = SubResource("BoxMesh_h3f4e")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.098
-
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 modulate = Color(5.917, 0.592, 0, 1)
 amount = 100
 process_material = SubResource("ParticleProcessMaterial_pfic1")
 lifetime = 2.0
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

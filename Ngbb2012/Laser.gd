@@ -2,15 +2,18 @@ extends Node2D
 
 static var marg : int = 100
 
-var speed = 10
-var dir = PI / 2
+var speed : float = 10
+var dir : float = PI / 2
 # how much damage the laser fire
 var damage : float
 
+# how many time can the laser 
+var penetrate : int = 1
+
 # this function is called when firing a laser
-func fire(angle : float, speed : float, damage : float):
+func fire(angle : float, speed : float, damage : float, penetrate : int):
 	self.damage = damage
-	
+	self.penetrate = penetrate
 	# set the laser's direction & speed
 	self.speed = speed
 	dir = angle
@@ -41,7 +44,9 @@ func _on_area_2d_body_entered(body):
 	if body is Alien:
 		body.applyDamage(damage)
 		createExplosion(global_position)
-		queue_free()
+		penetrate -= 1
+		if penetrate <= 0:
+			queue_free()
 		
 func createExplosion(pos : Vector2):
 	var obj = preload("res://Ngbb2012/Effects/Explosion.tscn").instantiate()
