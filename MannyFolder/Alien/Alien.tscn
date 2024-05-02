@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl6orb48j4xel"]
+[gd_scene load_steps=8 format=3 uid="uid://bl6orb48j4xel"]
 
+[ext_resource type="Shader" path="res://Flash.gdshader" id="1_0852u"]
 [ext_resource type="Script" path="res://MannyFolder/Alien/Alien.gd" id="1_aw53s"]
 [ext_resource type="Texture2D" uid="uid://bpt0jxdoksysk" path="res://MannyFolder/Alien/que.png" id="2_sdx27"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jd60u"]
+shader = ExtResource("1_0852u")
 
 [sub_resource type="SphereMesh" id="SphereMesh_iecv1"]
 
@@ -11,10 +15,12 @@
 radius = 56.4358
 
 [node name="Node2D" type="RigidBody2D"]
+material = SubResource("ShaderMaterial_jd60u")
 gravity_scale = 1.66533e-16
 script = ExtResource("1_aw53s")
 
 [node name="Graphics" type="Node2D" parent="."]
+use_parent_material = true
 scale = Vector2(5, 5)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Graphics"]

@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6jh6m06d2kho"]
+[gd_scene load_steps=4 format=3 uid="uid://b6jh6m06d2kho"]
 
 [ext_resource type="Script" path="res://Ngbb2012/Main.gd" id="1_303au"]
 [ext_resource type="PackedScene" uid="uid://d0ap5mceewtk2" path="res://MannyFolder/AlienSpawner/AlienSpawner.tscn" id="2_l2blb"]
+
+[sub_resource type="Environment" id="Environment_1h30e"]
+background_mode = 3
+tonemap_mode = 3
+glow_enabled = true
+glow_intensity = 0.1
+glow_bloom = 0.23
+glow_blend_mode = 1
+glow_hdr_luminance_cap = 4.0
+adjustment_enabled = true
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_303au")
@@ -27,3 +37,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="AlienSpawner" parent="." instance=ExtResource("2_l2blb")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1h30e")
